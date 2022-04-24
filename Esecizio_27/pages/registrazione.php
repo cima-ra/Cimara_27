@@ -12,8 +12,8 @@
     $query_getVoti =  "SELECT voti FROM candidati WHERE candidati.id_candidato = $_SESSION[id]";
     $result_getVoti = mysqli_query($connessione, $query_getVoti) or die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
 
-    //$query = "UPDATE candidati SET voti = $result_getVoti WHERE id_candidato = $_SESSION[id]";
-    //$result = mysqli_query($connessione, $query) or die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
+    $query = "UPDATE candidati SET voti = $result_getVoti WHERE id_candidato = $_SESSION[id]";
+    $result = mysqli_query($connessione, $query) or die("Query fallita " . mysqli_error($connessione) . " " . mysqli_errno($connessione));
 
 ?>
 
